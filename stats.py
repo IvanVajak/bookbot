@@ -18,6 +18,18 @@ def lettercount (stringy):
 
     return dicty
         
+def dictsorter (dictarray):
+    listofdict=[]
+    for entry in dictarray:
+        entry = {"char": entry,
+                 "num": dictarray[entry]}
+        listofdict.append(entry)
+        
+    def sort_on(item):
+        return item["num"]
+    listofdict.sort(reverse=True, key=sort_on)
     
+    return listofdict
+
     
 
